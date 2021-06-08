@@ -1,0 +1,144 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Alternativas.gd" type="Script" id=1]
+[ext_resource path="res://Graficos/botaoA.png" type="Texture" id=2]
+[ext_resource path="res://Graficos/botaoB.png" type="Texture" id=3]
+[ext_resource path="res://Graficos/botaoC.png" type="Texture" id=4]
+[ext_resource path="res://Graficos/botaoD.png" type="Texture" id=5]
+[ext_resource path="res://Graficos/botaoE.png" type="Texture" id=6]
+[ext_resource path="res://Graficos/botaoResposta.png" type="Texture" id=7]
+[ext_resource path="res://Graficos/imagem.png" type="Texture" id=8]
+[ext_resource path="res://Graficos/respostaErrada.png" type="Texture" id=9]
+
+[node name="Alternativas" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="A" type="Label" parent="."]
+editor/display_folded = true
+margin_left = 33.1974
+margin_top = 3.34497
+margin_right = 159.197
+margin_bottom = 17.345
+text = "AAAAAAAAAAAAAA"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="A" type="Button" parent="A"]
+margin_left = -32.6134
+margin_top = -3.34496
+margin_right = 5.3866
+margin_bottom = 28.655
+icon = ExtResource( 2 )
+flat = true
+
+[node name="B" type="Label" parent="."]
+editor/display_folded = true
+margin_left = 33.2833
+margin_top = 30.1848
+margin_right = 159.283
+margin_bottom = 44.1848
+text = "BBBBBBBBBBBBBB"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="B" type="Button" parent="B"]
+margin_left = -32.6993
+margin_top = -3.02982
+margin_right = 5.30073
+margin_bottom = 28.9702
+icon = ExtResource( 3 )
+flat = true
+
+[node name="C" type="Label" parent="."]
+editor/display_folded = true
+margin_left = 32.4853
+margin_top = 57.0405
+margin_right = 160.485
+margin_bottom = 71.0405
+text = "CCCCCCCCCCCCCCCC"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="C" type="Button" parent="C"]
+margin_left = -32.363
+margin_top = -2.84828
+margin_right = 5.637
+margin_bottom = 29.1517
+icon = ExtResource( 4 )
+flat = true
+
+[node name="D" type="Label" parent="."]
+editor/display_folded = true
+margin_left = 33.3618
+margin_top = 84.1639
+margin_right = 163.362
+margin_bottom = 98.1639
+text = "DDDDDDDDDDDDD"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="D" type="Button" parent="D"]
+margin_left = -32.5275
+margin_top = -3.09729
+margin_right = 5.4725
+margin_bottom = 28.9031
+icon = ExtResource( 5 )
+flat = true
+
+[node name="E" type="Label" parent="."]
+editor/display_folded = true
+margin_left = 33.2049
+margin_top = 111.159
+margin_right = 159.205
+margin_bottom = 125.159
+text = "EEEEEEEEEEEEEEEEEE"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="E" type="Button" parent="E"]
+margin_left = -32.5965
+margin_top = -3.20572
+margin_right = 5.40351
+margin_bottom = 28.7943
+icon = ExtResource( 6 )
+flat = true
+
+[node name="RespostaBotao" type="Button" parent="."]
+margin_left = 335.933
+margin_top = 107.685
+margin_right = 425.933
+margin_bottom = 139.685
+icon = ExtResource( 7 )
+flat = true
+
+[node name="Resposta" type="Label" parent="."]
+visible = false
+margin_left = 260.671
+margin_top = 16.7086
+margin_right = 386.671
+margin_bottom = 30.7086
+text = "A é a resposta"
+
+[node name="Imagem" type="Sprite" parent="Resposta"]
+position = Vector2( 46.4269, 48.8705 )
+scale = Vector2( 0.599998, 0.599998 )
+texture = ExtResource( 8 )
+
+[node name="RespostaIcone" type="Sprite" parent="."]
+position = Vector2( 328.773, 123.627 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+[connection signal="pressed" from="A/A" to="." method="_on_A_pressed"]
+[connection signal="pressed" from="B/B" to="." method="_on_B_pressed"]
+[connection signal="pressed" from="C/C" to="." method="_on_C_pressed"]
+[connection signal="pressed" from="D/D" to="." method="_on_D_pressed"]
+[connection signal="pressed" from="E/E" to="." method="_on_E_pressed"]
+[connection signal="pressed" from="RespostaBotao" to="." method="_on_RespostaBotao_pressed"]
+[connection signal="pressed" from="RespostaBotao" to="." method="_on_Resposta_pressed"]
